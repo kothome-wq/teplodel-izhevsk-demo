@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Теплодел · Отопление, вода и ремонт под ключ</title>
+<meta name="description" content="Котельная, тёплый пол, электрика, полусухая стяжка и ровные стены – без пяти разных подрядчиков. Подробная смета до начала работ.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Отопление, вода и ремонт в Ижевске – одной командой">
+<meta property="og:description" content="Котельная, тёплый пол, электрика, полусухая стяжка и ровные стены – без пяти разных подрядчиков. Подробная смета до начала работ.">
+<meta property="og:image" content="assets/pol-brus.webp">
+<link rel="preload" as="image" href="assets/pol-brus.webp" fetchpriority="high">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%236cc7e6%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --c-canvas: #171b20; --c-surface: #21262d; --c-ink: #eef1f4; --c-ink-soft: #9aa4ae; --c-accent: #6cc7e6; --c-accent-ink: #0b1a22; --c-accent-deep: #6cc7e6; --f-display: "Oswald", "Arial Narrow", system-ui, sans-serif; --f-text: "Onest", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
+</style>
+<link rel="stylesheet" href="style-prod.css">
+<style>
+/* «Теплодел»: разрез тёплого пола */
+.t-floor__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(20px, 4vw, 48px); align-items: start; }
+.t-floor__stack { list-style: none; margin: 0; padding: 0; border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); }
+.t-l { position: relative; display: grid; gap: 2px; align-content: center; padding: 14px clamp(16px, 3vw, 28px); min-height: 72px; }
+.t-l b { font: 600 1.05rem/1.15 var(--f-display); letter-spacing: .01em; }
+.t-l span { font-size: .9rem; }
+.t-l--finish { background: repeating-linear-gradient(90deg, #8a6440 0 118px, #7a5636 118px 120px), #8a6440; color: #fff7ee; }
+.t-l--screed { background: radial-gradient(#9aa0a6 1px, transparent 1.4px) 0 0 / 7px 7px, #b9bec3; color: #1b1f24; }
+.t-l--pipes { min-height: 104px; padding-bottom: 40px; color: #1b1f24; background: #eef0f2; }
+.t-l--pipes::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 26px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='26'%3E%3Cpath d='M0 6 C20 6 20 20 40 20 S60 6 80 6' fill='none' stroke='%23d6402b' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x left center / 80px 26px; }
+.t-l--mat { background: radial-gradient(circle, #ffffff 5px, transparent 5.5px) 0 0 / 22px 22px, #d9dde1; color: #1b1f24; }
+.t-l--base { background: linear-gradient(135deg, rgb(255 255 255 / .04) 25%, transparent 25% 50%, rgb(255 255 255 / .04) 50% 75%, transparent 75%) 0 0 / 18px 18px, #3a4048; color: var(--c-ink); }
+.t-l--finish span, .t-l--base span { opacity: .85; }
+.t-floor__fig { margin: 0; }
+.t-floor__fig img { width: 100%; aspect-ratio: 6 / 5; object-fit: cover; border-radius: var(--r); }
+.t-floor__fig figcaption { font-size: .82rem; color: var(--c-ink-soft); margin-top: 8px; }
+@media (prefers-reduced-motion: no-preference) {
+  .t-floor .t-l { opacity: 0; transform: translateY(-18px); transition: opacity .45s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }
+  .t-floor.is-in .t-l { opacity: 1; transform: none; }
+  .t-floor.is-in .t-l--base { transition-delay: .05s; }
+  .t-floor.is-in .t-l--mat { transition-delay: .2s; }
+  .t-floor.is-in .t-l--pipes { transition-delay: .35s; }
+  .t-floor.is-in .t-l--screed { transition-delay: .5s; }
+  .t-floor.is-in .t-l--finish { transition-delay: .65s; }
+}
+/* галерея объектов */
+.t-works__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.t-works__grid figure { margin: 0; }
+.t-works__grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r); }
+.t-works__grid figcaption { font-size: .82rem; color: var(--c-ink-soft); margin-top: 8px; }
+.t-works__more { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.s-reviews__rating { flex-wrap: wrap; column-gap: 14px; }
+@media (max-width: 960px) {
+  .t-floor__grid { grid-template-columns: 1fr; }
+  .t-floor__fig img { aspect-ratio: 16 / 11; }
+  .t-works__grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .t-works__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .t-l { min-height: 64px; padding: 12px 16px; }
+  .t-l--pipes { min-height: 96px; padding-bottom: 40px; }
+  .t-works__more .s-btn { flex: 1 1 100%; }
+}
+</style>
+</head>
+<body class="s-prod" id="top" data-wa="79120163338" data-tg="+79120163338" data-max="">
+<header class="s-bar" data-s-bar>
+  <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i>Теплодел</a>
+  <div class="s-bar__right">
+    <a class="s-bar__tel" href="tel:+79120163338">+7 912 016-33-38</a>
+    <a class="s-btn s-btn--sm" href="#widget">Записаться на консультацию</a>
+  </div>
+</header>
+<main>
+  <section class="s-hero">
+    <div class="s-hero__text">
+      <p class="s-eyebrow">Отопление, водоснабжение и ремонт домов и квартир в Ижевске</p>
+      <h1>Отопление, вода и ремонт в Ижевске – одной командой</h1>
+      <p class="s-lead">Котельная, тёплый пол, электрика, полусухая стяжка и ровные стены – без пяти разных подрядчиков. Подробная смета до начала работ.</p>
+      <ul class="s-ticks"><li>Подробная смета до начала работ</li><li>Делаем по проекту и в срок</li><li>Подскажем, где разумно сэкономить</li></ul>
+      
+      <figure class="s-hero__photo"><img class="" src="assets/pol-brus.webp" alt="Водяной тёплый пол в доме из бруса" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="s-hero__widget" id="widget"><form class="s-widget" data-s-booking data-days="7" data-closed="0,6" data-slots="08:00,09:00,10:00,11:00,12:00,13:00,14:00,15:00,16:00" data-message="Здравствуйте! Хочу консультацию: {услуга}. Удобно {день} в {время}. Объект: " onsubmit="return false">
+      <h2 class="s-widget__title">Запись на консультацию</h2>
+      <fieldset><legend>Услуга</legend>
+        <div class="s-chips s-chips--col"><label class="s-chip s-chip--row"><input type="radio" name="svc" value="0" data-name="Котельная под ключ" data-price="" data-from="" data-min="" checked><span>Котельная под ключ</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="1" data-name="Водяной тёплый пол" data-price="" data-from="" data-min=""><span>Водяной тёплый пол</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="2" data-name="Тёплый пол в доме из бруса" data-price="" data-from="" data-min=""><span>Тёплый пол в доме из бруса</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="3" data-name="Разводка отопления и радиаторы" data-price="" data-from="" data-min=""><span>Разводка отопления и радиаторы</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="4" data-name="Водоснабжение и канализация" data-price="" data-from="" data-min=""><span>Водоснабжение и канализация</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="5" data-name="Электромонтаж" data-price="" data-from="" data-min=""><span>Электромонтаж</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="6" data-name="Ремонт дома или квартиры" data-price="" data-from="" data-min=""><span>Ремонт дома или квартиры</span><b></b></label><label class="s-chip s-chip--row"><input type="radio" name="svc" value="7" data-name="Пока не знаю – нужен совет" data-price="" data-from="" data-min=""><span>Пока не знаю – нужен совет</span><b></b></label></div>
+      </fieldset>
+      <fieldset><legend>День</legend><div class="s-chips" data-s-days></div></fieldset>
+      <fieldset><legend>Время</legend><div class="s-chips" data-s-times></div></fieldset>
+      <div class="s-bubble" aria-live="polite"><span class="s-bubble__label">Ваше сообщение</span><p data-s-bubble></p></div>
+      <div class="s-send">
+        <a class="s-btn s-btn--wide" data-s-msg="whatsapp" href="#">Записаться в WhatsApp</a>
+        <a class="s-btn s-btn--ghost" data-s-msg="telegram" href="#">Telegram</a>
+      </div>
+      <p class="s-send__note" data-s-copied hidden>Текст скопирован – вставьте его в чат.</p>
+      
+    </form></div>
+    <figure class="s-hero__bg" aria-hidden="true"><img class="" src="assets/pol-brus.webp" alt="Водяной тёплый пол в доме из бруса" decoding="async" fetchpriority="high"></figure>
+  </section>
+
+  
+
+  <section class="s-section s-reveal t-floor" aria-labelledby="t-floor-h">
+    <header class="s-section__head"><h2 id="t-floor-h">Что внутри тёплого пола</h2><p>Пять слоёв под ногами. Всё, кроме чистового покрытия, делает одна команда – без стыковки подрядчиков и споров, кто виноват.</p></header>
+    <div class="t-floor__grid">
+      <ol class="t-floor__stack" reversed>
+        <li class="t-l t-l--finish"><b>Чистовой пол</b><span>ламинат, плитка или доска – под вашу отделку</span></li>
+        <li class="t-l t-l--screed"><b>Полусухая стяжка</b><span>ровная основа под покрытие</span></li>
+        <li class="t-l t-l--pipes"><b>Трубы тёплого пола</b><span>раскладка по контурам, петли – на коллектор</span></li>
+        <li class="t-l t-l--mat"><b>Утеплитель с бобышками</b><span>держит трубы и не отдаёт тепло вниз</span></li>
+        <li class="t-l t-l--base"><b>Основание</b><span>бетонная плита или пол в доме из бруса</span></li>
+      </ol>
+      <figure class="t-floor__fig"><img src="assets/g-pol-srub.webp" alt="Трубы тёплого пола уложены на утеплитель в срубе, рядом выводы на коллектор" loading="lazy" decoding="async"><figcaption>Сруб: трубы уложены, следующий слой – стяжка</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="s-section s-reveal" id="prices">
+    <header class="s-section__head"><h2>Что делаем</h2><p>Цена зависит от площади, оборудования и материалов. Напишите, что нужно, – посчитаем смету под ваш объект.</p></header>
+    <div class="s-board"><div class="s-board__group">
+      <h3 class="s-board__title">Тепло и вода</h3>
+      <ul class="s-board__list">
+        <li class="s-board__row"><span class="s-board__name">Котельная под ключ<em>котёл, бойлер, обвязка</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Водяной тёплый пол<em>раскладка, коллектор, запуск</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Тёплый пол в доме из бруса<em>по деревянному основанию</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Разводка отопления и радиаторы<em>поможем выбрать радиаторы</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Водоснабжение и канализация<em>разводка труб, узел ввода</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+      </ul>
+    </div>
+<div class="s-board__group">
+      <h3 class="s-board__title">Электрика и ремонт</h3>
+      <ul class="s-board__list">
+        <li class="s-board__row"><span class="s-board__name">Электромонтаж<em>вместе с инженерией или отдельно</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Полусухая стяжка<em>ровная основа под покрытие</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Штукатурка стен<em>ровные стены и прямые углы</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+        <li class="s-board__row"><span class="s-board__name">Ремонт дома или квартиры под ключ<em>по проекту, со сметой</em></span><span class="s-board__dots" aria-hidden="true"></span><span class="s-board__price">уточнить</span></li>
+      </ul>
+    </div></div>
+    <p class="s-note">Цены уточняйте в WhatsApp или по телефону +7 912 016-33-38.</p>
+  </section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head"><h2>Как мы работаем</h2></header>
+    <ol class="s-steps">
+      <li class="s-steps__item"><span class="s-steps__n">01</span><h3>Заявка</h3><p>Напишите, что нужно: дом или квартира, какая площадь, что уже есть.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">02</span><h3>Смета</h3><p>Считаем и объясняем простыми словами, предлагаем варианты и где можно сэкономить.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">03</span><h3>Работы по проекту</h3><p>Инженерия, стяжка, электрика и стены – одной командой, без стыковки подрядчиков.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">04</span><h3>Сдача</h3><p>Запускаем отопление и воду, показываем, как пользоваться.</p></li>
+    </ol>
+  </section>
+
+  <section class="s-section s-reveal t-works" aria-labelledby="t-works-h">
+    <header class="s-section__head t-works__head"><h2 id="t-works-h">Наши объекты</h2><p>Фото с наших объектов в Ижевске и пригороде – из карточки компании в 2ГИС.</p></header>
+    <div class="t-works__grid"><figure><img src="assets/kotelnaya.webp" alt="Котельная: настенный котёл, бойлер и расширительный бак" loading="lazy" decoding="async"><figcaption>Котельная: котёл и бойлер</figcaption></figure><figure><img src="assets/kollektor.webp" alt="Коллектор водяного тёплого пола" loading="lazy" decoding="async"><figcaption>Коллектор тёплого пола</figcaption></figure><figure><img src="assets/hero.webp" alt="Тёплый пол перед стяжкой в комнате с панорамным окном" loading="lazy" decoding="async"><figcaption>Тёплый пол перед стяжкой</figcaption></figure><figure><img src="assets/g-kotelnaya-brus.webp" alt="Котельная с бойлером в доме из бруса" loading="lazy" decoding="async"><figcaption>Котельная в доме из бруса</figcaption></figure><figure><img src="assets/g-pol-kottedzh.webp" alt="Тёплый пол на весь первый этаж коттеджа" loading="lazy" decoding="async"><figcaption>Тёплый пол в коттедже</figcaption></figure><figure><img src="assets/g-voda-uzel.webp" alt="Узел водоснабжения с фильтрами и тёплый пол" loading="lazy" decoding="async"><figcaption>Узел водоснабжения</figcaption></figure><figure><img src="assets/g-kotelnaya-dva-kotla.webp" alt="Котельная с двумя настенными котлами" loading="lazy" decoding="async"><figcaption>Котельная на два котла</figcaption></figure><figure><img src="assets/g-pol-brus-radiator.webp" alt="Тёплый пол и радиатор в доме из бруса" loading="lazy" decoding="async"><figcaption>Тёплый пол и радиатор, брус</figcaption></figure><figure><img src="assets/g-pol-sanuzel.webp" alt="Тёплый пол в санузле и выводы на коллектор" loading="lazy" decoding="async"><figcaption>Тёплый пол в санузле</figcaption></figure><figure><img src="assets/g-kollektor-shkaf.webp" alt="Коллекторный шкаф тёплого пола" loading="lazy" decoding="async"><figcaption>Коллекторный шкаф</figcaption></figure><figure><img src="assets/g-installyaciya.webp" alt="Инсталляция унитаза с подводкой воды" loading="lazy" decoding="async"><figcaption>Инсталляция и подводка воды</figcaption></figure><figure><img src="assets/g-radiator-komnata.webp" alt="Радиатор под окном в комнате после штукатурки" loading="lazy" decoding="async"><figcaption>Радиатор после штукатурки</figcaption></figure></div>
+    <p class="t-works__more"><a class="s-btn s-btn--ghost" href="https://2gis.ru/izhevsk/firm/70000001091210444/tab/photos" target="_blank" rel="noopener">Все фото в 2ГИС</a><a class="s-btn s-btn--ghost" href="https://yandex.ru/maps/org/teplodel18/30837453865/gallery/" target="_blank" rel="noopener">Фото на Яндекс Картах</a></p>
+  </section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head"><h2>Ещё за что нас благодарят</h2></header>
+    <ul class="s-promises">
+      <li><h3>Объясняют простыми словами</h3><p>«Все посчитали быстро, все доходчиво объяснили простыми словами, без ненужной терминологии» – Роман Геннадьевич, Яндекс Карты, апрель 2025.</p></li>
+      <li><h3>Подбирают решение</h3><p>«Консультируют, помогают подбирать наилучшее решение» – Наталья, 2ГИС, январь 2026.</p></li>
+      <li><h3>Чисто и уютно</h3><p>«Быстро отремонтировали мою любимую квартиру! Чисто ,тепло и уютно!» – Наталья М., 2ГИС, январь 2026.</p></li>
+    </ul>
+  </section>
+
+  <section class="s-section s-reveal">
+    <header class="s-section__head s-section__head--reviews"><h2>Отзывы с Яндекс.Карт</h2><p class="s-reviews__rating"><span class="s-reviews__count">4 отзыва</span><a class="s-reviews__all" href="https://yandex.ru/maps/org/teplodel18/30837453865/reviews/" target="_blank" rel="noopener">Читать все отзывы на Яндекс.Картах</a><a class="s-reviews__all" href="https://2gis.ru/izhevsk/firm/70000001091210444/tab/reviews" target="_blank" rel="noopener">Отзывы в 2ГИС</a></p></header>
+    <ul class="s-reviews">
+      <li><blockquote>«Остались самые лучшие впечатления от сотрудничества! Ремонт сделали отлично, а главное — точно в срок, что сейчас большая редкость. Хочется сказать спасибо за честность в расчетах: смета была подробная, а в итоге мы заплатили ровно ту сумму, на которую договаривались, без каких-либо накруток. Очень довольны результатом, теперь будем советовать вас всем друзьям и знакомым!»</blockquote><p class="s-reviews__who">Александр Федоров · 12 марта 2026</p></li>
+      <li><blockquote>«Хочу порекомендовать ребят из “Теплодела”! Делали нам ремонт в доме. Всё на уровне: сделали как в проекте, уложились в сроки. Ещё помогли с выбором материалов и подсказали, на чем можно разумно сэкономить. В общем, всё супер, дом стал очень уютным. Спасибо большое!»</blockquote><p class="s-reviews__who">Наталья А. · 27 марта 2026</p></li>
+      <li><blockquote>«От души спасибо компании "Теплодел" за отличную работу! Ремонт в квартире сделан на "5+"! Отдельное спасибо мастерам за прямые стены и ровные углы - ни одного зазора! Кухня встала идеально!»</blockquote><p class="s-reviews__who">LvY · 3 апреля 2026</p></li>
+    </ul>
+    <p class="s-note">Отзывы с карточки на Яндекс.Картах, без правок.</p>
+  </section>
+
+  
+
+  <section class="s-section s-final s-reveal" id="contacts">
+    <header class="s-section__head"><h2>Расскажите про ваш объект – посчитаем смету</h2></header>
+    <div class="s-contacts">
+      <dl>
+        <div><dt>Адрес</dt><dd>Буммашевская улица, 7/10, 2 этаж, Ижевск</dd></div>
+        <div><dt>Часы</dt><dd>пн–пт 08:00–17:00, сб–вс выходной</dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79120163338">+7 912 016-33-38</a></dd></div>
+      </dl>
+      <div class="s-contacts__actions">
+        <a class="s-btn" href="#widget">Записаться на консультацию</a>
+        <a class="s-btn s-btn--ghost" data-s-msg="whatsapp" href="#">WhatsApp</a>
+        <a class="s-btn s-btn--ghost" data-s-msg="telegram" href="#">Telegram</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="s-foot"><p>Теплодел · Ижевск</p><p>Отопление, водоснабжение, электрика и ремонт под ключ в Ижевске</p></footer>
+<nav class="s-dock" aria-label="Быстрая связь"><a class="s-btn" href="#widget">Записаться на консультацию</a><a class="s-btn s-btn--ghost" href="tel:+79120163338">Позвонить</a></nav>
+<script src="style.js" defer></script>
+</body>
+</html>
